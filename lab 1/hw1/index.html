@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML cơ bản toàn tập cho người mới phần 2</title>
+    <link rel="shortcut icon" href="https://evondev.com/wp-content/uploads/2019/12/cropped-evondev-favicon-32x32.png" type="image/x-icon">
+    <style>
+        code {color: red;}
+    </style>
+</head>
+<body>
+   <div>
+       <a href="https://evondev.com/" target="_blank"><img src="https://evondev.com/wp-content/uploads/2019/12/evondev-logo.png" alt="logo" width="60"></a>
+        <p>Chia sẻ kiến thức chuyên sâu về Frontend</p>
+   </div>
+   <div>
+       <ul>
+           <li><a href="https://evondev.com/category/psd-to-html/">PSD2HTML</a></li>
+           <li><a href="https://evondev.com/category/css-flexbox/">FLEXBOX</a></li>
+           <li><a href="https://evondev.com/category/css-grid/ ">GRID</a></li>
+           <li><a href="https://www.facebook.com/groups/2565163230401512/">NHÓM EVONDEV</a></li>
+           <li><a href="https://evondev.com/hoc-thu-html-css">HỌC THỬ MIỄN PHÍ</a></li>
+           <li><a href="https://evondev.com/category/useful/">USEFUL</a></li>
+           <li><a href="https://evondev.com/category/css-in-depth/">CSS CHUYÊN SÂU</a></li>
+       </ul>
+   </div>
+   <a href="https://evondev.com/banner-khoa-hoc-html-css"><img src="images/banner.png" alt="banner"></a>
+   <div>
+       <h1>HTML cơ bản toàn tập cho người mới phần 2</h1>
+       <p>&#128339;<a href="https://evondev.com/html-co-ban-toan-tap-2/">10/11/2020</a> &ensp; <img src="https://secure.gravatar.com/avatar/c80bab0a2e3e9df3cfa81fdd764874e1?s=24&d=identicon&r=g" alt="icon"><a href="https://evondev.com/author/evondev/">evondev</a></p>
+   </div>
+   <img src="https://evondev.com/wp-content/uploads/2020/11/html-co-ban-toan-tap-2-1200x580.png" alt="html5" width="60%">
+   <div>
+       <b>Nội dung bài viết</b>
+       <ul>
+           <li><a href="#a"># Các thẻ về form</a></li>
+           <li><a href="#a1">## Thẻ form</a></li>
+           <li><a href="#a2">## Thẻ input</a></li>
+           <li><a href="#a3">## Thẻ label</li></a>
+           <li><a href="#a4">## Thẻ textarea</a></li>
+           <li><a href="#a5">## Thẻ button</a></li>
+           <li><a href="#a6">## Thẻ fieldset</a></li>
+           <li><a href="#a7">## Thẻ select option</a></li>
+           <li><a href="#a8">## Sự khác nhau giữa input type submit và button type submit</a></li>
+           <li><a href="#b"># Tạm kết</a></li>
+       </ul>
+   </div>
+   <div>
+       <p><a href="C:\Users\Tien\Desktop\Web\lab 1\ex1\index.html" target="_blank">Ở phần trước</a> mình đã hướng dẫn cho các bạn các kiến thức về các thẻ hay dùng trong HTML nhất, tuy nhiên trong HTML thì còn rất nhiều thẻ khác và đi kèm với chúng là những thuộc tính nữa. Trong bài ngày hôm nay chúng ta sẽ cùng nhau khám phá và tìm hiểu thêm các thẻ trong form và table nhé. Bắt đầu thôi nào.</p>
+       <h2 id="a"># Các thẻ về form</h4>
+        <h4 id="a1">## Thẻ form</h4>
+        <p>Là <strong>thẻ block</strong>, thẻ này thường được dùng khi các bạn muốn gửi dữ liệu tới server như đăng nhập, đăng ký, cập nhật thông tin thông qua việc submit form. Trong thẻ form này có nhiều thuộc tính mà các bạn cần nắm rõ như sau.</p>
+        <ul>
+            <li>Thuộc tính <code>action</code> truyền vào đường dẫn hoặc file xử lý thông tin của form khi được người dùng nhấn nút submit</li>
+            <li>Thuộc tính <code>method</code> thì nó liên quan tới các phương thức HTTP khi submit form, nếu các bạn học cơ bản tới đây thì chưa cần phải hiểu quá những cái này, sau này các bạn học tới Javascript rồi làm việc với API Server thì các bạn sẽ nắm rõ mấy này hơn</li>
+            <li>Thuộc tính <code>name</code> giúp phân biệt giữa các form với nhau nếu các bạn sử dụng nhiều form trong một trang web</li>
+            <li>Thuộc tính <code>autocomplete</code> có giá trị mặc định là <code>on</code> nghĩa là nó sẽ hiển thị gợi ý khi các bạn đăng nhập hay đăng ký các bạn đưa chuột vào ô gõ thì nó gợi ý ra email chẳng hạn thì đó gọi là autocomplete, nếu các bạn muốn tắt nó đi thì chỉ cần thiết lập <code>autocomplete="off"</code> là được</li>
+            <li>Thuộc tính <code>enctype</code> định nghĩa các kiểu dữ liệu mà sẽ được gửi tới server, như là chữ, hay html hay là hình ảnh…</li>
+        </ul>
+        <img src="images/1.png" alt="1">
+        <figure>
+            <img src="images/2.png" alt="2" width="64%">
+            <figcaption><i>Minh hoạ một form cơ bản</i></figcaption>
+        </figure>
+        <h4 id="a2">## Thẻ input</h4>
+        <p>Là <strong>thẻ inline</strong>, và là <strong>thẻ tiwj đóng</strong>, thẻ này thường được dùng bên trong thẻ form ở trên, thẻ này có nhiều thuộc tính và trong các thuộc tính thì lại có rất nhiều giá trị mà các bạn nên biết và nắm rõ cách dùng nhé.</p>
+        <p>Đầu tiên là thuộc tính <code>type</code>, trong thuộc tính này có các giá trị như là</p>
+        <ul>
+            <li>Giá trị <code>text</code>, cho phép người dùng nhập vào kí tự nào cũng được như chữ, số, email…</li>
+            <li>Giá trị <code>email</code> khá giống giá trị text tuy nhiên trình duyệt sẽ hiểu đây là kiểu email cho nên buộc người dùng phải nhập vào email hợp lệ, khi ở trên thiết bị điện thoại thì bàn phím dành cho email sẽ hiển thị lên với dấu <code>@</code> mà các bạn có thể thử</li>
+            <li>Giá trị <code>number</code> thì phải nhập vào là số như số nguyên hoặc số lẻ, trên thiết bị điện thoại thì bàn phím số sẽ hiển thị lên tương ứng</li>
+            <li>Giá trị <code>pasword</code> để khi người dùng nhập mật khẩu sẽ hiển thị dấu *</li>
+            <li>Giá trị <code>date</code> sẽ hiển thị ngày khi người dùng nhập vào ngày tháng năm</li>
+            <li>Giá trị <code>time</code> sẽ hiển thị thời gian khi người dùng muốn chọn thời gian</li>
+            <li>Giá trị <code>file</code> để người dùng muốn upload file lên ví dụ như cập nhật avatar thì phải có input là file để người dùng chọn được ảnh họ muốn</li>
+            <li>Giá trị <code>checkbox</code> là nút check cho phép người dùng chọn hoặc bỏ chọn, hoặc có thể chọn nhiều cái, như khi liệt kê danh sách sở thích và người dùng có thể chọn nhiều cái trong đó hoặc không chọn cái nào</li>
+            <li>Giá trị <code>radio</code> cũng là nút check nhưng chỉ được chọn 1 trong 2 hoặc 1 trong nhiều thứ chứ không được chọn nhiều ví dụ khi người dùng chọn giới tính nam hoặc nữ</li>
+            <li>Giá trị <code>submit</code> sẽ làm cho nó trơ thành nút submit để người dùng khi điền xong thông tin và nhấn nút này hoặc nhấn nút Enter thì form sẽ submit dữ liệu.</li>
+        </ul>
+        <img src="images/3.png" alt="3">
+        <p>Tiếp theo là thuộc tính <code>placeholder</code>, thuộc tính này giúp tạo ra một lớp chữ mờ bên trong input khi mà người dùng chưa nhập nội dung vào</p>
+        <img src="images/4.png" alt="4">
+        <figure>
+            <img src="images/5.png" alt="5">
+            <figcaption><i>Placeholder</i></figcaption>
+        </figure>
+        <p>Thuộc tính <code>value</code> tức là giá trị của <code>input</code> để khi submit form thì người ta sẽ lấy những giá trị này đưa lên server xử lý, tuy nhiên làm sao để lấy được những giá trị này thì phải dựa vào thuộc tính <code>name</code> bên dưới đây.</p>
+        <p><strong>DÀNH CHO BẠN:</strong></p>
+        <p>Mình có khoá học HTML CSS từ cơ bản tới nâng cao cho người mới, nếu bạn quan tâm thì bạn có thể học thử <strong>miễn phí</strong> bằng việc <a href="https://evondev.com/hoc-thu-html-css" target="_blank">nhấn vào đây</a>nha.</p>
+        <p>Thuộc tính <code>name</code> giúp phân biệt giữa các input với nhau và cũng rất quan trọng, nó được dùng khi làm việc với Javascript để lấy dữ liệu từ các input dựa vào thuộc tính name này. Và khi làm việc với input có type là checkbox hay radio thì thuộc tính name này truyền vào giá trị cho các checkbox hay radio cùng tên để có thể lấy dữ liệu chính xác ví dụ nếu các bạn làm với radio chọn giới tính mà các bạn code như này</p>
+        <img src="images/6.png" alt="6">
+        <p>Các bạn không truyền vào name hoặc truyền vào name khác nhau thì khi submit form nó sẽ hiểu là 2 giá trị khác nhau do name khác nhau và người dùng có thể chọn cả 2 giá trị cả nam lẫn nữ trong khi đó bạn muốn chỉ chọn một trong hai thôi cho nên để khắc phục thì các bạn thêm trường name vào và giống nhau như sau:</p>
+        <img src="images/7.png" alt="7">
+        <p>Thuộc tính <code>required</code> khi mà các bạn muốn trường đó buộc người dùng phải nhập vào nếu không nhập vào thì sẽ không submit form được</p>
+        <img src="images/8.png" alt="8">
+        <p>Thuộc tính <code>disable</code> không cho phép người dùng nhấn vào input hay là làm gì cả, thuộc tính này các bạn sẽ dùng khi muốn cho người ta thấy được giá trị nhưng không thể làm gì chẳng hạn những hệ thống người ta không cho bạn đổi email chẳng hạn thì người sẽ thêm thuộc tính này vào</p>
+        <img src="images/9.png" alt="9">
+        <figure>
+            <img src="images/10.png" alt="10">
+            <figcaption><i>Input bị disabled</i></figcaption>
+        </figure>
+        <p>Thuộc tính <code>min</code> dùng với input có type là number có nghĩa là số nhỏ nhất mà người dùng phải nhập vào ví dụ nhập tuổi các bạn muốn tuổi nhỏ nhất phải là 18 thì sẽ có min=”18″</p>
+        <img src="images/11.png" alt="11">
+        <p>Ngược lại thuộc tính min đó chính là thuộc tính <code>max</code>, nghĩa là số lớn nhất mà người dùng có thể nhập vào ví dụ tuổi lớn nhất là 100 thôi chẳng hạn</p>
+        <img src="images/12.png" alt="12">
+        <p>Tương tự cho input type là text hay email chẳng hạn bạn muốn người dùng nhập vào tối thiểu bao nhiêu ký tự hay tối đa bao nhiêu ký tự thì chúng ta sẽ dùng 2 thuộc tính tương ứng là <code>minlength</code> và <code>maxlength</code> nhé</p>
+        <img src="images/13.png" alt="13">
+        <p>Thuộc tính <code>readonly</code> thì na ná với disabled là không làm được gì cái input cả, chỉ có cái khác là nó <strong>vẫn có thể focus</strong> còn disabled thì không, khi submit form thì input có readonly vẫn sẽ được gửi dữ liệu tới server còn input có disabled thì không.</p>
+        <img src="images/14.png" alt="14">
+        <figure>
+            <img src="images/15.png" alt="15">
+            <figcaption><i>Input đang dùng readonly</i></figcaption>
+        </figure>
+        <p>Ngoài ra <strong>input</strong><code>class</code> hoặc <code>id</code> nhé các bạn. Và thuộc tính id trong input hay được dùng khi làm việc với thẻ Label dưới đây</p>
+        <h4 id="a3">## Thẻ label</h4>
+        <p>Là <strong>thẻ inline</strong>, thẻ này thường được dùng với <strong>input, textaera</strong> để khi người dùng nhấn vào nó thì nó sẽ tự động trỏ tới input hay textarea để focus vào chúng thông qua <strong>thuộc tính for</strong>trong label</p>
+        <img src="images/16.png" alt="16">
+        <p>Thuộc tính <code>for</code> này sẽ trỏ tới <code>id</code> của input cho nên trong input cần có id tương ứng với giá trị trong for của label như sau, ở đây for có giá trị là name và input có id cũng là name, lưu ý id không được trùng nhau nhé</p>
+        <img src="images/17.png" alt="17">
+        <figure>
+            <img src="images/18.png" alt="18">
+            <figcaption><i>Thẻ label trong thực tế</i></figcaption>
+        </figure>
+        <h4 id="a4">## Thẻ textarea</h4>
+        <p>Là <strong>thẻ inline</strong>, thẻ này cũng giống thẻ input là đều có các thuộc tính như input, điểm khác ở đây là  <code>textarea</code> cho phép người dùng nhập vào nhiều nội dung và có thể enter xuống hàng còn input thì không được. Nó thường được dùng khi cho người dùng nhập vào mô tả thông tin cá nhân, hay là soạn thảo bài viết…</p>
+        <img src="images/19.png" alt="19">
+        <figure>
+            <img src="images/20.png" alt="20">
+            <figcaption><i>Thẻ textarea</i></figcaption>
+        </figure>
+        <h4 id="a5">## Thẻ button</h4>
+        <p>Là <strong>thẻ inline</strong>, thẻ này được dùng trong form khi người dùng nhấn vào để gửi dữ liệu đã nhập vào hoặc xoá hết dữ liệu. Thẻ button này có thuộc tính <code>type</code> với 3 giá trị là <code>submit</code>để submit dữ liệu và <code>reset</code> để xoá hết dữ liệu trong form khi nhập vào(khá nguy hiểm), cuối cùng là<code>button</code> sẽ không có tác dụng gì khi nhấn vào.</p>
+        <p>Thẻ button cũng có thuộc tính <code>disabled</code> nghĩa là không cho phép người dùng nhấn vào hay làm gì cả, kiểu như sau này các bạn làm việc với Javascript các bạn check nếu người dùng nhập đầy đủ thông tin thì mới cho nhấn chẳng hạn thì ban đầu sẽ có thuộc tính disabled, khi người dùng nhập hợp lệ thì mới xoá thuộc tính disabled đi.</p>
+        <img src="images/21.png" alt="21">
+        <figure>
+            <img src="images/22.png" alt="22">
+            <figcaption><i>Thẻ button</i></figcaption>
+        </figure>
+        <h4 id="a6">## Thẻ fieldset</h4>
+        <p>Là thẻ khi các bạn muốn gom nhóm các trường lại như input, button, textarea vào chung rồi disabled một nhóm luôn thay vì disabled từng cái.</p>
+        <img src="images/23.png" alt="23">
+        <h4 id="a7">## Thẻ select option</h4>
+        <p>Là <strong>thẻ block</strong>, thẻ này sẽ hiển thị dưới dạng dropdown cho phép các bạn chọn một danh sách được xổ ra trong thẻ <code>select</code> này sẽ có các thẻ <code>option</code> đi kèm với đó là <code>value</code> tương ứng cho option mà các bạn chọn. Trong thẻ select cũng có trường <code>name</code> như những thẻ input vì để phân biệt và sử dụng trong form nha.</p>
+        <img src="images/24.png" alt="24">
+        <p>Tuy nhiên select mặc định không được đẹp cho nên thường người ta sẽ tuỳ biến lại bằng các thẻ HTML khác như div, ul li thay vì dùng select option mặc định(do mặc định không tuỳ biến với CSS được) rồi sau đó dùng Javascript để lấy dữ liệu, và tuỳ biến lại thì sẽ đẹp hơn mặc định nhiều ví dụ</p>
+        <figure>
+            <img src="images/25.png" alt="25">
+            <figcaption><i>Custom dropdown</i></figcaption>
+        </figure>
+        <h4 id="a8"## Sự khác nhau giữa input type submit và button type submit></h4>
+        <p>Nhiều bạn có hỏi là 2 thẻ này khác nhau ra sao thì mình xin giải thích cho các bạn biết nhen. Khi các bạn dùng <strong>input type submit</strong> thì nó là thẻ tự đóng cho nên không truyền HTML vào giữa được, còn <strong>thẻ button</strong> thì các bạn có thể chèn HTML vào giữa như sau</p>
+        <img src="images/26.png" alt="26">
+        <p>Thẻ button thì có thể dùng pseudo như <code>:before</code> <a href="https://evondev.com/before-va-after-trong-css/" target="_blank">hay</a> <code>:after</code> còn <strong>input type submit</strong> thì không. Do vậy thường khi làm việc với form đa số sẽ dùng thẻ button hơn vì có thể tuỳ biến được nhiều hơn như hình dưới này mình dùng thẻ button và có loading bên trong khi submit form.</p>
+        <figure>
+            <img src="images/27.png" alt="27">
+            <figcaption><i>Button loading</i></figcaption>
+        </figure>
+        <h2 id="b"># Tạm kết</h2>
+        <p>Phần này chỉ nói đến các thẻ trong Form thôi mà cũng nhiều kiến thức phết. Hi vọng nó sẽ có ích cho các bạn mới học nha. Ở phần tiếp theo mình sẽ nói đến các thẻ khác như thẻ về bảng, các thẻ meta….. Chúc các bạn học tập tốt và một ngày tốt lành nhen.</p>
+   </div>
+   <div>
+        <a href="https://evondev.com/html-co-ban-toan-tap-3/"><img src="https://evondev.com/wp-content/uploads/2020/11/html-co-ban-toan-tap3-768x353.png" alt="p3" width="30%"></a>
+        <p><a href="https://evondev.com/html-co-ban-toan-tap-3/">HTML cơ bản toàn tập cho người mới phần 3</a></p>
+        <a href="C:\Users\Tien\Desktop\Web\lab 1\ex1\index.html"><img src="https://evondev.com/wp-content/uploads/2020/06/html-co-ban-toan-tap-phan-1-768x353.png" alt="p1" width="30%"></a>
+        <p><a href="C:\Users\Tien\Desktop\Web\lab 1\ex1\index.html">HTML cơ bản toàn tập cho người mới phần 1</a></p>
+   </div>
+   <div>
+       <form action="https://www.facebook.com/sharer.php?u=http://evondev.com/html-co-ban-toan-tap-2/" method="post" target="_blank">
+        <button type="submit">Facebook</button>
+       </form>
+       <form action="https://twitter.com/share?url=https://evondev.com/html-co-ban-toan-tap-2/" method="post" target="_blank">
+        <button type="submit">Twitter</button>
+       </form>
+       <form action="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://evondev.com/html-co-ban-toan-tap-2/" method="post" target="_blank">
+           <button type="submit">Linkedln</button>
+       </form>
+       <form action="http://reddit.com/submit?url=https://evondev.com/html-co-ban-toan-tap-2/" method="post" target="_blank">
+            <button type="submit">Reddit</button>
+       </form>
+       <form action="https://telegram.me/share/url?url=https%3A%2F%2Fevondev.com%2Fhtml-co-ban-toan-tap-2%2F%23.YEUuA60m4OA.telegram&text=HTML+c%C6%A1+b%E1%BA%A3n+to%C3%A0n+t%E1%BA%ADp+cho+ng%C6%B0%E1%BB%9Di+m%E1%BB%9Bi+ph%E1%BA%A7n+2+-+Evondev+Blog" method="post" target="_blank">
+            <button type="submit">Telegram</button>
+       </form>       
+   </div>
+</body>
+</html>

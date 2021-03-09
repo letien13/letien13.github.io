@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML cơ bản cho người mới phần 11</title>
+  <style>
+    code {color: red;}
+  </style>
+  <link rel="shortcut icon" href="https://evondev.com/wp-content/uploads/2019/12/evondev-logo.png" type="image/x-icon">
+  <body>
+    <div>
+      <a href="https://evondev.com/" target="_blank"><img src="https://evondev.com/wp-content/uploads/2019/12/evondev-logo.png" alt="logo" width="50"></a>
+      <p>Chia sẻ kiến thức chuyên sâu về Frontend</p>
+    </div>
+    <div>
+      <ul>
+        <li><a href="https://evondev.com/category/psd-to-html/">PSD2HTML</a></li>
+        <li><a href="https://evondev.com/category/css-flexbox/">FLEXBOX</a></li>
+        <li><a href="https://evondev.com/category/css-grid/">GRID</a></li>
+        <li><a href="https://www.facebook.com/groups/2565163230401512/">NHÓM EVONDEV </a></li>
+        <li><a href="https://evondev.com/hoc-thu-html-css">HỌC THỬ MIỄN PHÍ</a></li>
+        <li><a href="https://evondev.com/category/useful/">USEFUL</a></li>
+        <li><a href="https://evondev.com/category/css-in-depth/">CSS CHUYÊN SÂU</a></li>
+      </ul>
+    </div>
+    <div>
+      <h1>HTML cơ bản toàn tập cho người mới phần 1</h1>
+      <p>05/11/2020 &ensp;
+        <img src="https://secure.gravatar.com/avatar/c80bab0a2e3e9df3cfa81fdd764874e1?s=24&d=identicon&r=g" alt="icon">
+        evondev</p>
+      <img
+        src="https://evondev.com/wp-content/uploads/2020/06/html-co-ban-toan-tap-phan-1-1200x580.png"
+        alt="html5" width="900"
+      />
+    </div>  
+        <b>Nội dung bài viết</b>
+         <ul> 
+            <li><a href="#a"># Cấu trúc một thẻ trong HTML mà bạn nên biết</a></li>
+            <li><a href="#b"># Các thuộc tính của thẻ trong HTML</a></li>
+            <li><a href="#c"># Sự khác nhau giữa thẻ block và thẻ inline</a></li>
+            <li><a href="#d"># Tất tần tật các thẻ trong HTML hay dùng nhất</a></li>
+            <li><a href="#d1">## Thẻ p</a></li>
+            <li><a href="#d2">## Thẻ div</a></li>
+            <li><a href="#d3">## Thẻ a</a></li>
+            <li><a href="#d4">## Thẻ img</a></li>
+            <li><a href="#d5">## Các thẻ tiêu đề</a></li>
+            <li><a href="#d6">## Thẻ danh sách</a></li>
+            <li><a href="#d7">## Các thẻ semantic</a></li>
+            <li><a href="#d8">## Thẻ span, strong, b, em i</a></li>
+            <li><a href="#e"># Tạm kết phần 1</a></li>
+        </ul>  
+    <div>
+        <p>Xin chào các bạn đặc biệt là các bạn mới học ngành web này. Đây là một series về kiến thức HTML cơ bản toàn tập dành cho người mới mà mình quyết định viết và chia sẻ cách học, cách sử dụng áp dụng chúng vào thực tế như thế nào, cấu trúc ra sao… thông qua những năm kinh nghiệm mình đi làm và trau dồi. Hi vọng những kiến thức về HTML cơ bản toàn tập mà mình chia sẻ sẽ giúp các bạn hiểu hơn về HTML cơ bản cũng như sử dụng chúng một cách tốt nhất.</p>
+        <p>Mình thấy nhiều bạn mới học ở nhiều nguồn như w3schools hay MDN là những nguồn học nước ngoài tốt, tuy nhiên đôi khi các bạn đọc tiếng Anh không hiểu cũng như học xong không biết các thẻ trong HTML có những thẻ gì, áp dụng ra sao, lưu ý gì, thuộc tính gì… thì mình sẽ cố gắng chia sẻ hết cho các bạn trong series HTML cơ bản toàn tập này. OK bắt đầu thôi nào.</p>
+        <h2 id="a"># Cấu trúc một thẻ trong HTML mà bạn nên biết</h2>
+        <p>Ở trong HTML thì việc tìm hiểu cấu trúc một thẻ có thể là quá dễ tuy nhiên các bạn mới học thì nên biết chúng trông như thế nào, và cách sử dụng ra sao để làm cho chuẩn hơn</p>
+        <img src="images/1.png" alt="">
+        <p>Ở trên thì là thẻ p với <p> là thẻ mở sau đó đến nội dung là chữ content rồi đến thẻ đóng là </p> các bạn thấy thẻ đóng nó giống thẻ mở nhưng có dấu / phía trước nhé. Ngoài ra sau này các bạn học thêm thì sẽ thấy có một số thẻ người ta gọi là thẻ tự đóng nó như thế này</p>
+        <img src="images/2.png" alt="">
+        <p>Những thẻ có cấu trúc như trên gọi là thẻ tự đóng nghĩa là chúng ta không thể truyền nội dung vào giữa như thẻ đóng mở ở chỗ thẻ p mình nói ở trên, nếu các bạn code như dưới đây là sai nhé, vì thế khi dùng thẻ hãy học cách sử dụng một cách đúng đắn nhất để code chuẩn hơn nhé và tránh gặp lỗi nha.</p>
+        <img src="images/3.png" alt="">
+        <h2 id="b"># Các thuộc tính của thẻ trong HTML</h2>
+        <p>Những thẻ trong HTML được tạo ra đều có những thuộc tính đi kèm ví dụ như class, id là chung nhất ngoài ra mỗi thẻ sẽ có thêm các thuộc tính riêng ví dụ như thẻ a thì sẽ có href, target, input thì type, require, placeholder… Thì các bạn cần nắm được những cái này để sử dụng một cách đúng đắn nhất để code cho tốt như này</p>
+        <img src="images/4.png" alt="">
+        <p>Còn nếu thẻ đó không có mà các bạn đưa nó vào thì nhìn code của các bạn nó tệ lắm như này</p>
+        <img src="images/5.png" alt="">
+        <p>Các bạn nhìn vậy có thể sẽ nói sao mà code vậy được chứ mình thấy nhiều bạn mới hay code như này lắm nên mình chia sẻ ở đây nếu các bạn đang đọc blog của mình thì sẽ biết mà né để cho code của các bạn tốt hơn nhá.
+        <p>Thuộc tính thì rất nhiều và thẻ cũng thế, mình sẽ cố gắng liệt kê kèm giải thích cho các bạn dễ hiểu nhất trong những phần mình sẽ viết tiếp dưới đây</p>
+        <h3>DÀNH CHO BẠN:</h3>
+        <p>Mình có khoá học HTML CSS từ cơ bản tới nâng cao cho người mới, nếu bạn quan tâm thì bạn có thể học thử miễn phí bằng việc <a href="https://evondev.com/hoc-thu-html-css" target="_blank">nhấn vào đây</a> nha.</p>
+        <h2 id="c"># Sự khác nhau giữa thẻ block và thẻ inline</h2>
+        <p>Khi các bạn học tới các thẻ thì hay bị cái là dùng thẻ này thẻ kia mà không biết chúng khác nhau như thế nào từ đó dẫn tới việc code HTML không được tốt hoặc sai mục đích…Thì mình sẽ giải thích cho các bạn biết là thẻ inline và thẻ block khác nhau như thế nào và làm sao để biết thẻ nào là thẻ block và thẻ nào là thẻ inline.</p>
+        <p>Để nhận biết nhanh nhất đó chính là vào trang web htmlreference.io ở trang này nó sẽ tổng hợp toàn bộ các thẻ trong HTML và có mục đánh dấu thẻ nào là inline thẻ nào là block, thẻ nào là thẻ đóng mở, thẻ nào là thẻ tự đóng luôn để các bạn biết cách sử dụng cho tốt nhất luôn nhé.</p>
+        <p>Quay lại vấn đề chính thì thẻ inline và thẻ block có những điểm gì mà các bạn cần lưu ý</p>
+          <ul>
+            <li>Thẻ inline sẽ bị hạn chế về CSS như margin-top margin-bottom, padding-top, padding-bottom… khi sử dụng thẻ inline thì nên biết mà tuỳ trường hợp mà sử dụng, có thể dùng CSS để biến thẻ inline thành block hoặc inline block</li>
+            <li>Khi các thẻ inline nằm cùng nhau thì nó sẽ nằm trên một hàng như tên gọi của nó là inline</li>
+            <li>Thẻ inline sẽ có độ rộng bằng nội dung mà nó chứa</li>
+            <li>Thẻ block sẽ có độ rộng full 100% phần tử cha chứa nó</li>
+            <li>Thẻ block không bị hạn chế về CSS</li>
+            <li>Vì nó full 100% phần tử cha chứa nó cho nên khi dùng thẻ block cùng với nhau thì tụi nó sẽ rớt xuống hàng</li>
+            <li>Thẻ inline và thẻ block có thể sử dụng cùng với nhau, điển hình là thẻ a nằm trong thẻ p khi các bạn đọc bài viết mình có gắn link vào để các bạn nhấn</li>
+            <img src="images/6.png" alt="">
+            <li>Khi sử dụng CSS biến thẻ thành inline-block thì nó là sự kết hợp giữa thẻ inline và thẻ block, tức là nó sẽ có độ rộng theo nội dung nó chứa mà thôi(đặc điểm của thẻ inline), và không bị hạn chế về CSS(đặc điểm của thẻ block), nằm gần nhau thì nằm trên 1 hàng(đặc điểm của thẻ inline)</li>
+          </ul>
+        <h2 id="d"># Tất tần tật các thẻ trong HTML hay dùng nhất</h2>
+        <p>Ở những mục trên mình đã nói về cấu trúc cơ bản của một thẻ, các thuộc tính trong HTML, sự khác nhau giữa thẻ inline và thẻ block và cách sử dụng đúng đắn rồi. Ở mục này và các bài tiếp theo của series này mình sẽ tập trung nói về các thẻ, các thuộc tính kèm giải thích chi tiết hơn và cách sử dụng cho các bạn để các bạn thông não hơn về HTML nhé.</p>
+        <h4 id="d1">## Thẻ p</h4>
+        <p>Thẻ p là <strong>thẻ block</strong>, thẻ p có các thuộc tính hay dùng là class, id. Thẻ p theo mình nghĩ nó là viết tắt của <strong>paragraph</strong> là thẻ đại diện cho những đoạn văn bản, ví dụ các bạn đang đọc bài viết của mình các bạn nhấn F12 sẽ thấy các đoạn văn bản đều nằm trong thẻ p, vì thế khi các bạn code các bạn có thể dùng thẻ p để chứa những đoạn văn bản nhé. Tuy nhiên đoạn chữ ngắn vài 3 chữ dùng thẻ p cũng được không sao cả, tuy nhiên chữ ngắn thì mình khuyến khích dùng thẻ inline hoặc các thẻ tiêu đề hơn</p>
+        <img src="images/7.png" alt="">
+        <img src="images/8.png" alt="">
+        <h4 id="d2">## Thẻ div</h4>
+        <p>Là <strong>thẻ block</strong>, thẻ div cũng có các thuộc tính như class, id. Thẻ div là thẻ được sử dụng rộng rãi nhất hiện nay. Nó thường được dùng cho một khối nào đó lớn, bên trong khối đó có thể có nhiều khối nhỏ(cũng là thẻ div) hoặc các thẻ p, và nhiều thẻ khác. Các bạn sẽ dùng nó rất nhiều khi code HTML và nó cũng có thể chứa văn bản như thẻ p nhe, tuy nhiên khi dùng thẻ p thì về mặt ý nghĩa thì thẻ p sẽ rõ ràng hơn cho việc đại diện văn bản. </p>
+        <img src="images/9.png" alt="">
+        <img src="images/10.png" alt="">
+        <h4 id="d3">## Thẻ a</h4>
+        <p>Là <strong>thẻ inline</strong>, thẻ này dùng cho các liên kết, tức là các bạn muốn cho người dùng nhấn vào ra một trang web nào đó hay chỉ đơn giản là scroll tới mục nào đó trong body với điều kiện mục đó <strong>phải có id</strong> và trong <strong>thuộc tính href</strong> của thẻ a phải bắt đầu bằng <strong>dấu #</strong> như sau</p>
+        <img src="images/11.png" alt="">
+        <p>Trong thẻ a các bạn cần biết 3 thuộc tính quan trọng đó chính là <code>href, target và rel</code>, <strong>href</strong> sẽ truyền vào đường dẫn hoặc như mình nói ở trên dấu #, <strong>target</strong> thì có 2 giá trị thường được sử dụng nhất là <code>_self</code> và <code>_blank</code>, <strong>_self</strong> thì nó sẽ mở trong tab hiện tại luôn(dễ hiểu hơn nó sẽ thay thế tab hiện tại trên trình duyệt bằng link các bạn nhấn vào), còn <strong>_blank</strong> nó sẽ mở ra  một tab mới trên trình duyệt.</p>
+        <img src="images/12.png" alt="">
+        <p>Còn <code>rel</code> thì khi các bạn sử dụng với target có giá trị là <code>_blank</code> thì Google Chrome khuyến khích là thêm vào giá trị cho rel là <code>noopener noreferrer</code> để tăng tính bảo mật. Mặc định giá trị trong target là <code>_self</code> rồi nên các bạn có thể không cần ghi vào cũng được, ví dụ dưới đây</p>
+        <img src="images/13.png" alt="">
+        <p>Khi làm việc với thẻ a các bạn cần lưu ý thêm nữa là <strong>thẻ a không nên bọc thẻ a</strong>vì như vậy nó sẽ sai về code lẫn ý nghĩa sử dụng vì khi nhấn vào liên kết nó đã chạy rồi sẽ không có tác dụng cho một thẻ a con bên trong nữa như này và bên ngoài trình duyệt cũng render ra sai như sau, nên các bạn cần cẩn thận nhé.</p>
+        <img src="images/14.png" alt="">
+        <p>Bên trong thẻ a có thể chứa nhiều thẻ khác luôn nhé  như thẻ block khác, thẻ inline…Sau này các bạn code giao diện mà có cho người dùng nhấn vào một khối nào đó thì chắc chắn các bạn sẽ dùng thẻ a bao lại hết chúng.</p>
+        <h4 id="d4">## Thẻ img</h4>
+        <p>Là <strong>thẻ inline</strong> và là <strong>thẻ tự đóng</strong> nên không truyền nội dung vào giữa như các thẻ đóng mở khác được. Thẻ này sử dụng rất nhiều trong trang web để hiển thị hình ảnh, thẻ img có 2 thuộc tính chính mà các bạn cần nắm đó là <code>src</code> và <code>alt</code> trong đó <strong>src</strong> truyền vào đường dẫn hình ảnh để hiển thị hình ảnh lên trang web, còn thẻ <strong>alt</strong> thì là liên quan tới SEO một chút, khi hình ảnh đường dẫn sai sẽ không hiển thị được thì nội dung trong thẻ alt sẽ hiển thị lên.</p>
+        <img src="images/15.png" alt="">
+        <img src="images/16.png" alt="">
+        <p>Ngoài ra trong thẻ img còn có thêm thuộc tính <code>srcset</code> để hiển thị hình ảnh ở nhiều kích thước màn hình khác nhau tuy nhiên thuộc tính này khá khó sử dụng cho newbie nên mình chưa giải thích ở phạm</p>
+        <h4 id="d5">## Các thẻ tiêu đề</h4>
+        <p>Các thẻ tiêu đề là những thẻ <code>h1,h2,h3,h4,h5,h6</code> là <strong>thẻ block</strong> và thường đại diện cho các tiêu đề từ to cho đến nhỏ và có cách sử dụng khác nhau nhé(h1 là to nhất tới h6 là nhỏ nhất). Thẻ <strong>h1</strong> là thẻ thường được sử dụng cho một tiêu đề to nhất của trang web và lưu ý trong một trang web thì chỉ có <strong>tối đa một thẻ h1</strong> mà thôi, vì nó ảnh hưởng tới SEO cho nên nếu các bạn sử dụng nhiều hơn một thẻ h1 thì không tốt đâu nhé.</p>
+        <img src="images/17.png" alt="">
+        <p>Thẻ <strong>h2</strong> được sử dụng cho một khối lớn, các bạn sẽ thấy khi làm giao diện landing page chẳng hạn, thì thẻ h2 này được dùng làm tiêu đề to cho một khối nào đó để người ta biết được khối đó là gì.</p>
+        <img src="images/18.png" alt="">
+        <p>Thẻ <strong>h3</strong> được dùng nhỏ hơn ở bên trong các khối lớn đó sẽ có các bài viết nhỏ, khối nhỏ thì dùng h3, và cứ thế khối nhỏ hơn cho đến h4, h5, rồi h6. Các bạn có thể thấy thực tế luôn là bài mà các bạn đang đọc nè tiêu đề to trên cùng là h1 đó, trong nội dung sẽ có các tiêu đề nhỏ hơn là h2, h3, h4, h5 hay h6…</p>
+        <img src="images/19.png" alt="">
+        <img src="images/20.png" alt="">
+        <p>Như tên gọi của nó thì nó được dùng cho cấu trúc có tiêu đề ví dụ như tiêu đề khối, tiêu đề bài viết, tiêu đề blog, các bạn xem hình minh hoạ là hiểu ngay ấy mà…. Bên trong nó có thể chứa thẻ a, hoặc các thẻ inline khác, hay thẻ block… Và các bạn lưu ý đừng code như dưới này nhé</p>
+        <img src="images/21.png" alt="">
+        <p>Hoặc các đoạn văn bản dài như ở thẻ p thì nên dùng thẻ p hoặc thẻ div chẳng hạn chứ đừng dùng những thẻ tiêu đề này cho một đoạn văn bản quá dài nha.</p>
+        <h4 id="d6">## Thẻ danh sách</h4>
+        <p>Thẻ danh sách thì có 2 thẻ chính với cấu trúc hay dùng là <code>ul li</code> và <code>ol li</code>i. Trong đó <strong>ul</strong> nghĩa là <strong>unorderedlist</strong> nghĩa danh sách không có thứ tự, tức là khi dùng nó sẽ hiển thị dưới dạng như này với các chấm tròn mặc định hoặc vuông dựa vào CSS sẽ nói sau này.</p>
+        <ul>
+          <li>a</li>
+          <li>b</li>
+        </ul>
+        Còn <strong>ol</strong> là <strong>orderedlist</strong> nghĩa là danh sách có thứ tự tức được đánh số như mục lục vậy 1 2
+        <ol>
+          <li>a</li>
+          <li>b</li>
+        </ol>
+        <p>Cấu trúc <strong>ul li</strong> được sử dụng rất nhiều khi làm menu như này</p>
+        <img src="images/22.png" alt="">
+        <img src="images/23.png" alt="">
+        <p>Lưu ý thêm <strong>thẻ li cũng không bọc trực tiếp thẻ li</strong> để tránh lỗi nhé nó như dưới đây</p>
+        <img src="images/24.png" alt="">
+        <p>Tuy nhiên nó sẽ bọc lại được khi không phải trực tiếp <strong>li li</strong> mà là <strong>li ul li</strong> để làm menu đa cấp trong HTML hay được sử dụng như sau </p>
+        <h4 id="d7">## Các thẻ semantic</h4>
+        <p>Các thẻ semantic các bạn có thể sẽ thấy khi kiểm tra code blog mình hoặc các blog trang web khác… như thẻ header, thẻ footer, thẻ nav, thẻ aside, thẻ article, thẻ main, thẻ section thì các bạn có thể hiểu như này những thẻ này theo cách mình dùng thì nó sẽ làm cho cấu trúc code của chúng ta nó rõ ràng mạch lạc hơn thôi chứ các bạn dùng toàn thẻ div thay vì dùng các thẻ semantic này vẫn ổn, không sao cả.</p>
+        <p>Tuy nhiên như mình nói dùng những thẻ này thì nhìn cấu trúc code nó rõ ràng mạch lạc hơn là vì nhìn vào là biết nó làm gì, ví dụ các bạn dùng thẻ header thì sẽ biết à nó là header nằm ở phía trên trang web, thẻ nav là dùng cho điều hướng menu, thẻ footer nó nằm ở dưới cùng, thẻ article là bài viết, thẻ section là một khối, …. các bạn có thể check code blog của mình ở trang chủ là sẽ thấy những thẻ này, và nó là thẻ block dùng y chang thẻ div không khác gì, có thể thêm class hay id….</p>
+        <p>Cho nên là nếu các bạn dùng không quen mà dùng thẻ div không cũng không sao cả nhé.</p>
+        <img src="images/25.png" alt="">
+        <h4 id="d8">## Thẻ span, strong, b, em i</h4>
+        <p>Đây đều là những thẻ inline, ngược với thẻ p thì những thẻ này thường được sử dụng cho các đoạn chữ ngắn thôi, chữ ngắn là như thế nào ví dụ các bạn sẽ thấy một số thiết kế có đoạn chữ như ngày giờ, tên tác giả,… nó nằm bên trong một khối nào đó nhưng không phải tiêu đề chính nha vì tiêu đề thì nên dùng các <strong>thẻ h</strong> hơn, tuy nhiên những thẻ này có thể nằm bên trong <strong>thẻ h</strong> nha, hoặc bên trong các thẻ block khác như này</p>
+        <img src="images/26.png" alt="">
+        <img src="images/27.png" alt="">
+        <p>Thẻ <code>strong</code> và thẻ <code>b</code> giống nhau sẽ làm cho chữ <strong>in đậm</strong>, còn thẻ <code>em</code> và thẻ <code>i</code> giống nhau sẽ làm cho chữ <em>in nghiêng</em> nha.</p>
+        <h2 id="e"># Tạm kết phần 1</h2>
+        <p>Woww viết ra cũng dài cũng được khá nhiều kiến thức tuy cơ bản nhưng rất quan trọng cho các bạn mới học HTML. Ở phần tiếp theo mình sẽ nói đến tất tần tật các thẻ về Form nha. Chúc các bạn học tập tốt và một ngày tốt lành nhen.</p>
+    </div>
+    <br>
+    <div>
+      <ul>
+        <li><a href="https://evondev.com/html-co-ban-toan-tap-3/"><img src="https://evondev.com/wp-content/uploads/2020/11/html-co-ban-toan-tap3.png" alt="p3" height="200"></a></li>
+        <a href="https://evondev.com/html-co-ban-toan-tap-3/">HTML cơ bản toàn tập cho người mới phần 3</a>
+        <li><a href="C:\Users\Tien\Desktop\Web\lab 1\hw1\index.html"><img src="https://evondev.com/wp-content/uploads/2020/11/html-co-ban-toan-tap-2.png" alt="p2" height="200"></a></li>
+        <a href="C:\Users\Tien\Desktop\Web\lab 1\hw1\index.html">HTML cơ bản toàn tập cho người mới phần 2</a>
+      </ul>
+    </div>
+
+  </body>
+</html>
