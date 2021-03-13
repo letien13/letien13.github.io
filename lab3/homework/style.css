@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Shippori Mincho B1", serif;
+  margin: 0px;
+}
+img {
+  vertical-align: middle;
+  width: 100%;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.link {
+  text-decoration: none;
+  color: rgb(34, 33, 33);
+}
+.link:active,
+.link:visited,
+.link:checked {
+  color: rgb(34, 33, 33);
+}
+.link:hover {
+  color: chocolate;
+}
+
+.header {
+  background-image: url(https://bloganh.net/wp-content/uploads/2020/05/cach-tao-dang-quay-lung-voi-ong-kinh.jpg);
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 50px;
+}
+
+.nav {
+  background-color: rgb(224, 225, 228);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: sticky;
+  top: 0px;
+  left: 0;
+}
+.nav-bar {
+  text-align: center;
+}
+.nav-item {
+  display: inline;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.content {
+  background-color: #f1f1f1;
+  padding-left: 18%;
+}
+.main {
+  width: 60%;
+  margin-right: 10px;
+}
+
+.post-list {
+  margin-bottom: 10px;
+}
+
+.post-thumbnail {
+  height: 400px;
+}
+
+.post-content {
+  height: 145px;
+  background-color: white;
+  overflow: hidden;
+  padding: 10x;
+}
+
+.post-link:hover {
+  color: rgb(34, 33, 33);
+}
+.post-short-content {
+  color: black;
+}
+.aside {
+  vertical-align: top;
+  width: 15%;
+  background-color: darkgrey;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: sticky;
+  top: 54px;
+  border-radius: 20%;
+}
+
+.footer {
+  padding: 20px;
+  background-color: coral;
+}
+.copy-right {
+  text-align: center;
+}
