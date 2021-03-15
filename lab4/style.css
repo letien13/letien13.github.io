@@ -1,0 +1,97 @@
+body {
+  height: 1000px;
+}
+.menu {
+  word-spacing: -1ch;
+}
+
+.menu-item {
+  display: inline-block;
+  word-spacing: normal;
+  vertical-align: top;
+  position: relative;
+}
+
+.menu-link {
+  text-decoration: none;
+  padding: 20px;
+  background: pink;
+  display: block;
+}
+
+.menu-link.active {
+  color: black;
+  background: burlywood;
+}
+/* .menu-link:hover {
+  background-color: burlywood;
+  color: black;
+}
+.menu-link:hover + .sub-menu {
+  display: block; */
+
+.menu-item:hover .menu-link {
+  background-color: burlywood;
+  color: black;
+}
+.menu-item:hover > .sub-menu {
+  display: block;
+}
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  padding-left: 0;
+  background-color: crimson;
+}
+
+.sub-link {
+  text-decoration: none;
+  color: aliceblue;
+  padding: 15px;
+  display: block;
+}
+
+.sub-item:hover > .sub-link {
+  background-color: black;
+}
+
+.sub-item:hover > .sub-menu {
+  display: block;
+}
+
+.sub-item .sub-menu {
+  top: 0;
+  left: 100%;
+}
+
+.call-link {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+  background: rgb(203, 162, 226);
+  padding: 30px;
+  text-decoration: none;
+  display: block;
+}
+
+/* .modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(153, 87, 87, 0.2);
+}
+.modal-content {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  background-color: white;
+  padding: 20px;
+} */
