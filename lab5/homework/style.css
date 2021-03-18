@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  background: #f0f2f5;
+  height: 700px;
+}
+
+.container {
+  width: 100%;
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+.logo {
+  display: inline-block;
+  width: 550px;
+  margin-left: 130px;
+  margin-top: 110px;
+  vertical-align: top;
+}
+.title {
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+.start {
+  display: inline-block;
+  width: 396px;
+  height: 350px;
+  background: white;
+  padding: 16px;
+  border-radius: 5px;
+  margin-top: 100px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+input {
+  border: 1px solid #dddfe2;
+  border-radius: 5px;
+}
+.form-start {
+  width: 364px;
+  height: 52px;
+  margin-bottom: 15px;
+}
+
+.b-login {
+  width: 364px;
+  height: 48px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background: #1877f2;
+  border: none;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.forget-pass {
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.line {
+  border-bottom: 1px solid #dadde1;
+  margin-bottom: 25px;
+}
+
+.sign-in1 {
+  display: block;
+  width: 200px;
+  height: 48px;
+  background: #42b72a;
+  text-align: center;
+  font-size: 17px;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+.sign-in1:hover {
+  background: #30881f;
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+}
+
+.popup-wrap {
+  background: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1400px;
+  height: 900px;
+  display: none;
+}
+
+.popup:checked + .popup-wrap {
+  display: block;
+}
+
+.input-info {
+  width: 432px;
+  height: 510px;
+  background: white;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  position: absolute;
+  top: 30px;
+  left: 400px;
+  padding: 16.5px;
+}
+
+.text {
+  display: inline-block;
+}
+
+.close {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+/* .line2 {width: 432px
+  ;
+border-bottom:1px solid #dadde1 ;} */
+
+.name {
+  width: 197px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.form2 {
+  width: 399px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+/* .birthday-label {margin-bottom: 5px;} */
+
+#day {
+  width: 123px;
+  height: 36px;
+  margin-right: 10.5px;
+}
+
+#month {
+  width: 123px;
+  height: 36px;
+  margin-right: 10.5px;
+}
+
+#year {
+  width: 123px;
+  height: 36px;
+}
+
+.gender {
+  margin-top: 10px;
+}
+
+span {
+  display: inline-block;
+  width: 130px;
+  height: 36px;
+  border: 1px solid #ccd0d5;
+}
+
+.gender-label {
+  margin-right: 65px;
+}
+
+.si-foot {
+  font-size: 11px;
+}
+
+.send {
+  display: block;
+  height: 36px;
+  width: 194px;
+  background: #00a400;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  margin-left: 130px;
+  font-size: 12px;
+}
+
+.language {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.link {
+  margin-right: 30px;
+}
+
+/* CSS cho table */
+table,
+th,
+tr,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+table {
+  width: 528px;
+  height: 470px;
+  border: 3px solid gray;
+}
+.xs {
+  font-weight: bold;
+  color: #30881f;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.head {
+  padding: 10px;
+}
+tbody th {
+  font-weight: normal;
+}
+tbody td {
+  font-weight: bold;
+}
+.date {
+  border-top: none;
+}
+.head {
+  border-bottom: none;
+}
+
+tbody th:hover,
+tbody td:hover {
+  background: orange;
+}
+
+p {
+  display: inline-block;
+}
+
+.DB {
+  color: red;
+}
+.DB td {
+  font-size: 20px;
+}
+
+/* tbody tr:nth-child(odd),
+.plus {
+  background: rgb(212, 206, 206);
+}
+
+!important {
+  background: white;
+} */
