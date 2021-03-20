@@ -305,11 +305,13 @@ a:hover .video-duration {
 }
 button {
   border: none;
-
-
 }
 .button {
   width: 30px;
   border: none;
   border-radius: 50%;
+}
+
+footer {
+  color: #888;
 }
