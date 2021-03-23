@@ -165,7 +165,7 @@ ul {
   color: #1d1f2e;
 }
 
-main {
+.main {
   width: 940px;
   margin-left: auto;
   margin-right: auto;
@@ -208,11 +208,12 @@ h2 {
 
 .item {
   width: 460px;
-  background-image: url("https://assets.website-files.com/5be96251aaba7a84f6ecdf81/5be96251aaba7a512bece011_liana-mikah-698524-unsplash.jpg");
-  background-size: contain;
+ 
 }
 
 .class-image {
   width: 460px;
   height: 540px;
+   background-image: url("https://assets.website-files.com/5be96251aaba7a84f6ecdf81/5be96251aaba7a512bece011_liana-mikah-698524-unsplash.jpg");
+  background-size: contain;
 }
