@@ -1,0 +1,10 @@
+body {
+  background-image: linear-gradient(0deg, red, blue 30%);
+  min-height: 100vh;
+}
+p{  transition-property: transform;
+  transition-duration: 5s;}
+p:hover {
+  transform: rotateX(360deg) ;
+
+}

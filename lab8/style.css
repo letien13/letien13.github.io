@@ -1,0 +1,218 @@
+/* Custom Variable */
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+html {
+  --nav-hover: #1d1f2e;
+  --button-hover: #2f3247;
+  --link-hover: #743f2f;
+}
+
+/* Chung */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: var(--a-hover-color);
+}
+
+ul {
+  list-style: none;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+/* Class chung */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex.nowrap {
+  flex-wrap: nowrap;
+}
+
+/* Direction */
+.flex.column {
+  flex-direction: column;
+}
+
+/* Justify */
+.j-center {
+  justify-content: center;
+}
+
+.j-start {
+  justify-content: flex-start;
+}
+
+.j-end {
+  justify-content: flex-end;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+/* Align */
+.a-start {
+  align-items: flex-start;
+}
+
+.a-end {
+  align-items: flex-end;
+}
+
+.a-center {
+  align-items: center;
+}
+
+/* Noi dung */
+.nav {
+  font-size: 12px;
+  width: 940px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-item {
+  margin-right: 20px;
+  font-weight: 700;
+  color: var(--nav-hover);
+}
+.nav-item:hover {
+  color: var(--link-hover);
+}
+
+.header-image {
+  width: 1440px;
+}
+
+.cart {
+  width: 90.18px;
+  height: 30px;
+}
+
+.header-image {
+  max-width: 1440px;
+  background-color: #050827;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.header-content {
+  width: 940px;
+  height: 530px;
+  background-image: url("https://assets.website-files.com/5be96251aaba7a7b19ecdf69/5be96251aaba7a58aaecdfba_Header-Pic.jpg");
+  background-size: contain;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-headline-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.header1 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.header2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.header3 {
+  font-size: 18px;
+}
+
+.product-link {
+  width: 230.38px;
+  height: 53.6px;
+  color: #1d1f2e;
+  background: #fafafa;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.product-link:hover {
+  color: #1d1f2e;
+}
+
+main {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.descrition {
+  width: 658px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 400px;
+  line-height: 40px;
+}
+
+.paragraph {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: rgba(29, 31, 46, 0.7);
+  line-height: 28px;
+}
+
+}
+.about {
+  font-size: 16px;
+  color: #a25f4b;
+  border-bottom: 2px solid rgba(162, 95, 75, 0.2);
+  padding: 10px;
+}
+.about:hover {
+  color: #743f2f;
+  border-bottom-color: rgba(162, 95, 75, 0.7);
+}
+
+.featured-mug {
+  width: 100%;
+}
+
+.item {
+  width: 460px;
+  background-image: url("https://assets.website-files.com/5be96251aaba7a84f6ecdf81/5be96251aaba7a512bece011_liana-mikah-698524-unsplash.jpg");
+  background-size: contain;
+}
+
+.class-image {
+  width: 460px;
+  height: 540px;
+}
