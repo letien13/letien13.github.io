@@ -15,7 +15,8 @@ html {
 }
 
 img {
-  max-width: 100%;
+  /* max-width: 100%; */
+  max-height: 100%;
   vertical-align: middle;
 }
 
@@ -33,6 +34,15 @@ ul {
 .upper {
   text-transform: uppercase;
 }
+
+body {
+  color: #1d1f2e;
+}
+
+.d-inblk {
+  display: inline-block;
+}
+
 /* Class chung */
 .container {
   margin-left: auto;
@@ -72,6 +82,10 @@ ul {
   justify-content: space-between;
 }
 
+.j-evenly {
+  justify-content: space-evenly;
+}
+
 /* Align */
 .a-start {
   align-items: flex-start;
@@ -97,10 +111,15 @@ ul {
 .nav-item {
   margin-right: 20px;
   font-weight: 700;
-  color: var(--nav-hover);
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 2px;
 }
-.nav-item:hover {
-  color: var(--link-hover);
+.nav-item a {
+  color: #777982;
+}
+.nav-item:hover a {
+  color: #1d1f2e;
 }
 
 .header-image {
@@ -110,6 +129,22 @@ ul {
 .cart {
   width: 90.18px;
   height: 30px;
+  color: #c1c1ca;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.cart-text {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.cart-quality {
+  padding: 2px 6px;
+  background: #c1c1ca;
+  border-radius: 50%;
+  color: white;
+  font-size: 11px;
 }
 
 .header-image {
@@ -166,15 +201,21 @@ ul {
 }
 
 .main {
-  width: 940px;
+  width: 960px;
   margin-left: auto;
   margin-right: auto;
+  color: #1d1f2e;
+}
+
+section {
+  width: 100%;
+  margin-bottom: 80px;
+  margin-top: 20px;
 }
 
 .descrition {
   width: 658px;
   text-align: center;
-  margin-bottom: 100px;
 }
 
 h2 {
@@ -190,7 +231,6 @@ h2 {
   line-height: 28px;
 }
 
-}
 .about {
   font-size: 16px;
   color: #a25f4b;
@@ -202,18 +242,140 @@ h2 {
   border-bottom-color: rgba(162, 95, 75, 0.7);
 }
 
-.featured-mug {
-  width: 100%;
+.section-head {
+  margin-bottom: 80px;
 }
 
-.item {
-  width: 460px;
- 
+.subline {
+  width: 30px;
+  height: 1px;
+  background-color: #ececed;
+  margin: 15px;
+}
+
+.section-title {
+  opacity: 0.6;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* .item {
+  height: 652.6px;
+} */
+
+.item-box {
+  width: 48%;
 }
 
 .class-image {
-  width: 460px;
+  width: 100%;
   height: 540px;
-   background-image: url("https://assets.website-files.com/5be96251aaba7a84f6ecdf81/5be96251aaba7a512bece011_liana-mikah-698524-unsplash.jpg");
-  background-size: contain;
+  /* background-image: url("https://assets.website-files.com/5be96251aaba7a84f6ecdf81/5be96251aaba7a512bece011_liana-mikah-698524-unsplash.jpg");
+  background-size: cover;
+  background-position: center; */
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
 }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-image: linear-gradient(
+    180deg,
+    rgba(29, 31, 46, 0.1),
+    rgba(29, 31, 46, 0.1)
+  );
+  position: absolute;
+  top: -8px;
+  left: 0;
+  padding: 25px 3%;
+}
+
+.hidden-button {
+  width: 94%;
+  height: 53.6px;
+  background: #fafafa;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 17.6px;
+  letter-spacing: 2px;
+  line-height: 18px;
+  text-align: center;
+  padding: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  transition-duration: 0.4s;
+  position: absolute;
+  bottom: 15px;
+}
+
+/* .class-image:hover {
+  border-bottom-color: rgba(162, 95, 75, 0.8);
+} */
+
+.class-image:hover .overlay {
+  display: block;
+  transform: translate3d(0px, 8px, 0px) scale3d(1, 1, 1);
+  transform-style: preserve-3d;
+}
+
+.item-info {
+  text-align: center;
+  width: 100%;
+}
+
+.item-name {
+  font-size: 20px;
+  line-height: 30px;
+  display: block;
+}
+
+.price {
+  font-size: 16px;
+  line-height: 28px;
+  color: rgba(29, 31, 46, 0.7);
+}
+
+.sale {
+  width: 91.3px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  color: #a25f4b;
+  font-weight: 700;
+  background: white;
+  text-align: center;
+  padding: 10px;
+  z-index: 100;
+}
+
+.price-sale {
+  color: #a25f4b;
+  font-size: 20px;
+  line-height: 32px;
+}
+.price-origin {
+  font-size: 16px;
+  line-height: 28px;
+  color: rgba(29, 31, 46, 0.4);
+  text-decoration: line-through;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.h-380px {
+  height: 380px;
+}
+
+/* .thumb {
+  background-size: cotain;
+  background-position: center;
+} */
