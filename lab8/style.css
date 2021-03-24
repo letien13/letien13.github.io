@@ -136,6 +136,7 @@ body {
   letter-spacing: 2px;
 }
 .cart-text {
+  padding: 0px 5px;
   /* margin-left: 8px;
   margin-right: 8px; */
 }
@@ -484,6 +485,7 @@ h2 {
   background: #1d1f2e;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 100px;
 }
 
 .subscribe-content {
@@ -529,4 +531,72 @@ h2 {
 
 .w-color {
   color: #fff;
+}
+
+footer {
+  width: 940px;
+  height: 202px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about {
+  width: 30%;
+}
+
+.mini-nav {
+  width: 15%;
+}
+
+.follow {
+  width: 15%;
+}
+
+.contact {
+  width: 30%;
+}
+
+.footer-link {
+  margin-bottom: 10px;
+}
+.footer-link a {
+  color: rgba(29, 31, 46, 0.7);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.footer-link:hover {
+  color: #a25f4b;
+}
+
+ul {
+  margin-top: 30px;
+}
+
+.footer-text {
+  align-self: auto;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(29, 31, 46, 0.7);
+  margin-top: 30px;
+}
+
+.vertical-top {
+  vertical-align: top;
+}
+
+.copyright {
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(29, 31, 46, 0.3);
+}
+.copyright:hover {
+  color: #a25f4b;
+}
+
+.email {
+  font-size: 24px;
+  line-height: 36px;
+  color: #1d1f2e;
+  padding: 33px 0px;
 }
