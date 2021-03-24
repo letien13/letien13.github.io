@@ -380,3 +380,70 @@ h2 {
   background-size: cotain;
   background-position: center;
 } */
+
+.image-wrap {
+  width: 50%;
+}
+
+.large-image {
+  width: 280px;
+  height: 280px;
+  margin-right: 20px;
+  background-image: url("https://assets.website-files.com/5be96251aaba7a7b19ecdf69/5be96251aaba7a2f3decdfa9_Image.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.small-image-wrap {
+  width: 160px;
+}
+
+.small-image1 {
+  width: 160px;
+  height: 130px;
+  margin-bottom: 20px;
+  background-image: url("https://assets.website-files.com/5be96251aaba7a7b19ecdf69/5be96251aaba7aa6d0ecdfa7_Image%202.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.small-image2 {
+  width: 160px;
+  height: 130px;
+  margin-bottom: 20px;
+  background-image: url("https://assets.website-files.com/5be96251aaba7a7b19ecdf69/5be96251aaba7a528fecdfa6_Image.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.magazine-wrap {
+  width: 50%;
+  padding: 35px 0;
+  padding-left: 60px;
+}
+
+.magazine-get {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 400;
+}
+
+.shopping {
+  width: 172.76px;
+  height: 53.6px;
+  background: #1d1f2e;
+  color: #fafafa;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 20px 25px;
+}
+
+.shopping:hover {
+  background: #2f3247;
+  color: #fafafa;
+}
