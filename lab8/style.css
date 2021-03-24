@@ -109,16 +109,20 @@ body {
 }
 
 .nav-item {
-  margin-right: 20px;
-  font-weight: 700;
   font-size: 12px;
   line-height: 18px;
+  font-weight: 700;
   letter-spacing: 2px;
+  margin-left: 15px;
+  margin-right: 10px;
 }
 .nav-item a {
   color: #777982;
 }
 .nav-item:hover a {
+  color: #1d1f2e;
+}
+.nav-item.active a{
   color: #1d1f2e;
 }
 
@@ -310,7 +314,9 @@ h2 {
   padding: 18px;
   margin-left: auto;
   margin-right: auto;
-  transition-duration: 0.4s;
+  transition-duration: 0.4s, 0.4s, 0.4s;
+  transition-property: background-color, opacity, box-shadow;
+  transition-delay: 0s, 0s, 0s;
   position: absolute;
   bottom: 15px;
 }
@@ -324,7 +330,11 @@ h2 {
   transform: translate3d(0px, 8px, 0px) scale3d(1, 1, 1);
   transform-style: preserve-3d;
 }
-
+.class-image:hover .hidden-button {
+  transform: translate3d(0px, 8px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
 .item-info {
   text-align: center;
   width: 100%;
