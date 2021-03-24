@@ -447,3 +447,18 @@ h2 {
   background: #2f3247;
   color: #fafafa;
 }
+
+.background-view {
+  width: 100%;
+  height: 340px;
+  background-image: url("https://assets.website-files.com/5be96251aaba7a7b19ecdf69/5be96251aaba7ac1c6ecdfd2_Section%20Image%202.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 80px;
+}
+
+.square {
+  width: 300px;
+  height: 300px;
+}
