@@ -226,7 +226,7 @@ h2 {
 
 .paragraph {
   font-size: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   color: rgba(29, 31, 46, 0.7);
   line-height: 28px;
 }
@@ -461,4 +461,19 @@ h2 {
 .square {
   width: 300px;
   height: 300px;
+}
+
+.t-left {
+  text-align: left;
+}
+
+.story-title {
+  margin-bottom: 10px;
+  color: #1d1f2e;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.story-title:hover {
+  color: #a25f4b;
 }
