@@ -228,9 +228,7 @@ h2 {
   font-weight: 400px;
   line-height: 40px;
 }
-.fw-400 {
-  font-weight: 400px;
-}
+
 .paragraph {
   font-size: 16px;
   margin-bottom: 25px;
@@ -611,4 +609,9 @@ ul {
   line-height: 36px;
   color: #1d1f2e;
   padding: 20px 0px 46px 0px;
+}
+.fw-400 {
+  font-size: 28px;
+  font-weight: 400px;
+  line-height: 40px;
 }
