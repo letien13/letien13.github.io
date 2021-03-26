@@ -8,6 +8,5 @@ public class App {
         System.out.println("Nhập chuỗi B:");
         String chuoiB = scanner.nextLine();
         System.out.println(chuoiA.equals(chuoiB));
-
     }
 }
