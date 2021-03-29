@@ -8,7 +8,7 @@ public class ex1 {
         System.out.println("Nhap a: ");
         a = sc.nextDouble();
         while (a == 0) {
-            System.out.println("Nhap lai a: ");
+            System.out.println("Nhap lai a (a!=0): ");
             a = sc.nextDouble();
         }   
         System.out.println("Nhap b: ");
