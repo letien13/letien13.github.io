@@ -10,7 +10,6 @@ public class ex1 {
         while (a == 0) {
             System.out.println("Nhap lai a: ");
             a = sc.nextDouble();
-            a += 0;
         }   
         System.out.println("Nhap b: ");
         b = sc.nextDouble();
