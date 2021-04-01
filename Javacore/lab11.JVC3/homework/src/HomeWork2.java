@@ -34,5 +34,7 @@ public class HomeWork2 {
         }
         System.out.println();
         System.out.println("Tong cac phan tu cua duong cheo chinh: " + sum);
+
+        sc.close();
     }
 }
