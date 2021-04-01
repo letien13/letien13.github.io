@@ -59,15 +59,17 @@ public class HomeWork1 {
         }
         System.out.println("Mang a: ");
         for (int j = 0; j < n; j++) {
-           System.out.println(a[j]); 
+            System.out.println(a[j]);
         }
+        
+        sc.close();
     }
     
     public static boolean isChecked(int n) {
         if (n < 2) {
             return false;
         }
-        
+
         double squareRoot = Math.sqrt(n);
         for (int i = 2; i <= squareRoot; i++) {
             if (n % i == 0) {
@@ -75,6 +77,6 @@ public class HomeWork1 {
             }
         }
 
-        return true;         
-        }
+        return true;
+    }
 }
