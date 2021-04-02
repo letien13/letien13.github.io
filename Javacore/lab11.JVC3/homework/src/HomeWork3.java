@@ -20,24 +20,33 @@ public class HomeWork3 {
         
         // Tim phan tu lon nhat va lon thu 2
         int max1 = A[0];
-        int vitri1 = 0;
         for (int i = 0; i < n; i++) {
             if (A[i] > max1) {
-                vitri1 = i;
                 max1 = A[i];
             }
         }
-        System.out.printf("Phan tu lon nhat la A[%d] = %d \n", vitri1, max1);
-        
+        System.out.printf("Phan tu lon nhat la: %d \n", max1);
+        System.out.print("Vi tri phan tu lon nhat: ");
+        for (int i = 0; i < n; i++) {
+            if (A[i] == max1) {
+                System.out.printf("A[%d] \t", i);
+            }
+        }
+
         int max2 = A[0];
-        int vitri2 = 0;
         for (int i = 0; i < n; i++) {
             if (A[i] > max2 && max1 > A[i]) {
-                vitri2 = i;
                 max2 = A[i];
             }
         }
-        System.out.printf("Phan tu lon thu 2 la A[%d] = %d \n", vitri2, max2);
+        System.out.println();
+        System.out.printf("Phan tu lon thu 2 la: %d \n", max2);
+        System.out.print("Vi tri phan tu lon thu 2: ");
+        for (int i = 0; i < n; i++) {
+            if (A[i] == max2) {
+                System.out.printf("A[%d] \t", i);
+            }
+        }
 
         // Tim so nguyen to
         System.out.println("So nguyen to trong mang A: ");
