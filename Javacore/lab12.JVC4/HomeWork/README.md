@@ -8,7 +8,7 @@ Sự khác biệt giữa lớp và đối tượng:
     + Chỉ có một cách để định nghĩa lớp trong java sử dụng từ khoá class.
 
 - Đối tượng:
-    + Là là thể hiện của 1 lớp.
+    + Là thể hiện của 1 lớp.
     + Là 1 thực thể trong thế giới thực.
     + Là 1 thực thể vật lý.
     + Có thể được tạo nhiều lần.
