@@ -1,15 +1,12 @@
 public class KiemChungVien extends NhanVien {
     private int soLoi;
 
-    public KiemChungVien(String name, String email, long phoneNumber, long basicSalary, int id, int age, int soLoi,
-            long salary) {
-        super(name, email, phoneNumber, basicSalary, id, age);
-        this.soLoi = soLoi;
-        this.salary = salary;
+    public KiemChungVien(String name, String email, long phoneNumber, long basicSalary, long salary, int id, int age) {
+        super(name, email, phoneNumber, basicSalary, salary, id, age);
     }
     public KiemChungVien(int soLoi, long salary) {
         this.soLoi = soLoi;
-        this.salary = salary;
+      
     }
     public KiemChungVien() {
     }
@@ -19,12 +16,7 @@ public class KiemChungVien extends NhanVien {
     public void setSoLoi(int soLoi) {
         this.soLoi = soLoi;
     }
-    public long getSalary() {
-        return salary;
-    }
-    public void setSalary(long salary) {
-        this.salary = salary;
-    }
+    
 
     @Override
     public void input() {
@@ -35,11 +27,11 @@ public class KiemChungVien extends NhanVien {
     }
 
    @Override
-   public void salaryCalculator() {
+   public long salaryCalculator() {
        // TODO Auto-generated method stub
        super.salaryCalculator();
         this.salary = this.basicSalary + this.soLoi * 50000;
-
+        return this.salary;
    }
     @Override
     public void display() {
@@ -48,5 +40,6 @@ public class KiemChungVien extends NhanVien {
         System.out.println("So loi phat hien duoc: " + soLoi);
         System.out.println("Luong: " + this.salary);
     }
+
 
 }

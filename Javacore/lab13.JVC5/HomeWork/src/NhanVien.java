@@ -3,12 +3,12 @@ import java.util.Scanner;
 public class NhanVien {
     private String name, email;
     private long phoneNumber;
-    protected long basicSalary, salary;
+    protected int basicSalary, salary;
     private int id, age;
     Scanner sc = new Scanner(System.in);
 
     public NhanVien(String name, String email, long 
-    phoneNumber, long basicSalary,long salary, int id, int age) {
+    phoneNumber, int basicSalary,int salary, int id, int age) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
@@ -45,11 +45,11 @@ public class NhanVien {
         this.phoneNumber = phoneNumber;
     }
 
-    public long getBasicSalary() {
+    public int getBasicSalary() {
         return basicSalary;
     }
 
-    public void setBasicSalary(long basicSalary) {
+    public void setBasicSalary(int basicSalary) {
         this.basicSalary = basicSalary;
     }
 
@@ -69,11 +69,11 @@ public class NhanVien {
         this.age = age;
     }
     
-    public long getSalary() {
+    public int getSalary() {
         return salary;
     }
 
-    public void setSalary(long salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 
@@ -89,7 +89,7 @@ public class NhanVien {
         System.out.print("Nhap email: ");
         email = sc.nextLine();
         System.out.print("Nhap luong co ban: ");
-        basicSalary = sc.nextLong();
+        basicSalary = sc.nextInt();
     }
 
     public void display() {
@@ -98,7 +98,8 @@ public class NhanVien {
         System.out.println("Luong co ban: " + basicSalary);
     }
     
-    public void salaryCalculator() {
+    public int salaryCalculator() {
+        return 0;
     }
 
    

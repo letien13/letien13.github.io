@@ -1,17 +1,13 @@
 public class LapTrinhVien extends NhanVien {
     private int overTime;
 
-
-    public LapTrinhVien(String name, String email, long phoneNumber, long basicSalary, int id, int age, int overTime,
-            long salary) {
-        super(name, email, phoneNumber, basicSalary, id, age);
-        this.overTime = overTime;
-        this.salary = salary;
+    public LapTrinhVien(String name, String email, long phoneNumber, long basicSalary, long salary, int id, int age) {
+        super(name, email, phoneNumber, basicSalary, salary, id, age);
     }
-
+    
     public LapTrinhVien(int overTime, long salary) {
         this.overTime = overTime;
-        this.salary = salary;
+
     }
 
     public LapTrinhVien() {
@@ -25,13 +21,6 @@ public class LapTrinhVien extends NhanVien {
         this.overTime = overTime;
     }
     
-    public long getSalary() {
-        return salary;
-    }
-
-    public void setSalary(long salary) {
-        this.salary = salary;
-    }
 
     @Override
     public void input() {
@@ -42,10 +31,11 @@ public class LapTrinhVien extends NhanVien {
     }
 
     @Override
-    public void salaryCalculator() {
+    public int salaryCalculator() {
         // TODO Auto-generated method stub
         super.salaryCalculator();
         this.salary = this.basicSalary + this.overTime * 200000;
+        return this.salary;
     }
     @Override
     public void display() {
