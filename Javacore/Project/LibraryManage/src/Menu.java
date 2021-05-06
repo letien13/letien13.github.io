@@ -1,19 +1,11 @@
 public class Menu {
-    public static void chooseUser() {
-        System.out.println("Dang nhap nguoi dung:");
-        System.out.println("1. Hoi vien");
-        System.out.println("2. Thu thu");   
-    }
-    
-    public static void allUserChoose() {
+   
+    public static void choose() {
         System.out.println("0. Thoat chuong trinh");
         System.out.println("1. Xem thong tin sach trong thu vien");
         System.out.println("2. Xem thong tin sach theo the loai");
         System.out.println("3. Tim sach theo tac gia");
         System.out.println("4. Tim sach theo ten");
-    }
-
-    public static void librarianChoose() {
         System.out.println("5. Them sach");
         System.out.println("6. Sua thong tin sach");
         System.out.println("7. Xoa sach");

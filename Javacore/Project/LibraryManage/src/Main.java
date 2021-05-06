@@ -7,52 +7,60 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner sc = new Scanner(System.in);
         bookRepository = new BookRepository();
-
-            Menu.chooseUser();
+        while (true) {
+            Menu.choose();
             System.out.print("Nhap lua chon: ");
-            int user = sc.nextInt();
-            switch (user) {
-                case 1:
-                    while (true) {
-                        Menu.allUserChoose();
-                        System.out.print("Lua chon: ");
-                        int choose = sc.nextInt();
-                        sc.nextLine();
-                        allUser(choose);
-                    }
+            int choose = Integer.valueOf(sc.nextLine());
+            switch (choose) {
+               case 0:
+                System.exit(0);
+                break;
 
-                case 2:
-                    while (true) {
-                        Menu.allUserChoose();
-                        Menu.librarianChoose();
-                        System.out.print("Lua chon: ");
-                        int choose = sc.nextInt();
-                        sc.nextLine();
-                        allUser(choose);
-                        switch (choose) {
-                            case 5:
-                                Menu.chooseCategory();
-                                System.out.print("Lua chon: ");
-                                int chooseCategory = sc.nextInt();
-                                addBook(chooseCategory);
-                                break;
+            case 1:
+                bookRepository.getListBook();
+                break;
 
-                            case 6:
-                                System.out.print("Nhap ten sach muon sua: ");
-                                String bookName = sc.nextLine();
-                                bookRepository.edit(bookName);
-                                break;
+            case 2:
+                Menu.chooseCategory();
+                System.out.print("Lua chon: ");
+                int chooseCategory = sc.nextInt();
+                getListByCategory(chooseCategory);
+                break;
 
-                            case 7:
-                                System.out.print("Nhap ten sach muon xoa: ");
-                                bookName = sc.nextLine();
-                                bookRepository.edit(bookName);
-                                break;
-                        }
-                    }
+            case 3:
+                System.out.print("Nhap ten tac gia muon tim: ");
+                String arthorName = sc.nextLine();
+                bookRepository.getBookByArthor(arthorName);
+                break;
+
+            case 4:
+                System.out.print("Nhap ten sach muon tim: ");
+                String bookName = sc.nextLine();
+                bookRepository.search(bookName);
+                break;
+            case 5:
+                Menu.chooseCategory();
+                System.out.print("Lua chon: ");
+                chooseCategory = sc.nextInt();
+                addBook(chooseCategory);
+                break;
+
+            case 6:
+                System.out.print("Nhap ten sach muon sua: ");
+                bookName = sc.nextLine();
+                bookRepository.edit(bookName);
+                break;
+
+            case 7:
+                System.out.print("Nhap ten sach muon xoa: ");
+                bookName = sc.nextLine();
+                bookRepository.edit(bookName);
+                break;
             }
-            sc.close();
         }
+    }     
+           
+        
 
     public static void getListByCategory(int choose) {
         switch (choose) {
@@ -81,39 +89,6 @@ public class Main {
                 bookRepository.getListByCategory();
                 break;
         }
-    }
-    
-    public static void allUser(int choose) {
-        Scanner sc = new Scanner(System.in);
-        switch (choose) {
-            case 0:
-                System.exit(0);
-                break;
-
-            case 1:
-                bookRepository.getListBook();
-                break;
-
-            case 2:
-                Menu.chooseCategory();
-                System.out.print("Lua chon: ");
-                int chooseCategory = sc.nextInt();
-                getListByCategory(chooseCategory);
-                break;
-
-            case 3:
-                System.out.print("Nhap ten tac gia muon tim: ");
-                String arthorName = sc.nextLine();
-                bookRepository.getBookByArthor(arthorName);
-                break;
-
-            case 4:
-                System.out.print("Nhap ten sach muon tim: ");
-                String bookName = sc.nextLine();
-                bookRepository.search(bookName);
-                break;
-        }
-       
     }
     
     public static void addBook(int choose) {
