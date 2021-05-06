@@ -47,9 +47,12 @@ public class BookRepository {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+    
+    }
+
+    public void getListBook() {
         System.out.println("Danh sach sach trong thu vien:");
         listBook.forEach(System.out::println);
-
     }
 
     public List<Book> getBookByCategory(Category category) {

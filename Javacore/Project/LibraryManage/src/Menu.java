@@ -7,15 +7,16 @@ public class Menu {
     
     public static void allUserChoose() {
         System.out.println("0. Thoat chuong trinh");
-        System.out.println("1. Xem thong tin sach theo the loai");
-        System.out.println("2. Tim sach theo tac gia");
-        System.out.println("3. Tim sach theo ten");
+        System.out.println("1. Xem thong tin sach trong thu vien");
+        System.out.println("2. Xem thong tin sach theo the loai");
+        System.out.println("3. Tim sach theo tac gia");
+        System.out.println("4. Tim sach theo ten");
     }
 
     public static void librarianChoose() {
-        System.out.println("4. Them sach");
-        System.out.println("5. Sua thong tin sach");
-        System.out.println("6. Xoa sach");
+        System.out.println("5. Them sach");
+        System.out.println("6. Sua thong tin sach");
+        System.out.println("7. Xoa sach");
     }
     
     public static void chooseCategory() {

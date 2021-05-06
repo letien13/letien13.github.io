@@ -30,20 +30,20 @@ public class Main {
                         sc.nextLine();
                         allUser(choose);
                         switch (choose) {
-                            case 4:
+                            case 5:
                                 Menu.chooseCategory();
                                 System.out.print("Lua chon: ");
                                 int chooseCategory = sc.nextInt();
                                 addBook(chooseCategory);
                                 break;
 
-                            case 5:
+                            case 6:
                                 System.out.print("Nhap ten sach muon sua: ");
                                 String bookName = sc.nextLine();
                                 bookRepository.edit(bookName);
                                 break;
 
-                            case 6:
+                            case 7:
                                 System.out.print("Nhap ten sach muon xoa: ");
                                 bookName = sc.nextLine();
                                 bookRepository.edit(bookName);
@@ -89,20 +89,25 @@ public class Main {
             case 0:
                 System.exit(0);
                 break;
+
             case 1:
+                bookRepository.getListBook();
+                break;
+
+            case 2:
                 Menu.chooseCategory();
                 System.out.print("Lua chon: ");
                 int chooseCategory = sc.nextInt();
                 getListByCategory(chooseCategory);
                 break;
 
-            case 2:
+            case 3:
                 System.out.print("Nhap ten tac gia muon tim: ");
                 String arthorName = sc.nextLine();
                 bookRepository.getBookByArthor(arthorName);
                 break;
 
-            case 3:
+            case 4:
                 System.out.print("Nhap ten sach muon tim: ");
                 String bookName = sc.nextLine();
                 bookRepository.search(bookName);
