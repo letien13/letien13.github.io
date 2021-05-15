@@ -7,10 +7,10 @@ public class Book {
     private int borrowedTime;
     private int borrowing;
     private int inStock;
-    private Category category;
+    private String category;
     
     public Book(String bookId, String bookName, String arthor, String publisher, int publicYear, int borrowedTime,
-            int borrowing, int inStock, Category category) {
+            int borrowing, int inStock, String category) {
         this.bookId = bookId;
         this.bookName = bookName;
         this.arthor = arthor;
@@ -86,17 +86,17 @@ public class Book {
         this.inStock = inStock;
     }
 
-    public Category getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
     @Override
     public String toString() {
-        return bookId +" - " + bookName +" - "+ arthor +" - "+ publisher +" - "+ publicYear +" - "+ borrowedTime +" - "+ borrowing +" - "+ inStock ;
+        return bookId +" - " + bookName +" - "+ arthor +" - "+ publisher +" - "+ publicYear +" - "+ borrowedTime +" - "+ borrowing +" - "+ inStock +" - "+ category;
     }
 
 }

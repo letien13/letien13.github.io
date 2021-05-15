@@ -28,21 +28,9 @@ public class BookRepository {
                 int borrowedTime = Integer.parseInt(str[5]);
                 int borrowing = Integer.parseInt(str[6]);
                 int inStock = Integer.parseInt(str[7]);
-                Category category = null;
-                if (str[8].equalsIgnoreCase("Sach tham khao")) {
-                    category = Category.REFERENCE;
-                } else if (str[8].equalsIgnoreCase("Sach van hoc")) {
-                    category = Category.LITERATURE;
-                } else if (str[8].equalsIgnoreCase("Truyen tranh")) {
-                    category = Category.COMIC;
-                } else if (str[8].equalsIgnoreCase("Sach ngoai ngu")) {
-                    category = Category.LANGUAGE;
-                } else if (str[8].equalsIgnoreCase("Sach kinh te")) {
-                    category = Category.ECONOMIC;
-                }
+                String category = str[8];
 
-                listBook.add(new Book(bookId, bookName, arthor, publisher, publicYear, borrowedTime, borrowing, inStock,
-                        category));
+                listBook.add(new Book(bookId, bookName, arthor, publisher, publicYear, borrowedTime, borrowing, inStock, category));
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -51,14 +39,14 @@ public class BookRepository {
     }
 
     public void getListBook() {
-        System.out.println("Danh sach sach trong thu vien:");
+        System.out.println("Danh sách sách trong thư viện:");
         listBook.forEach(System.out::println);
     }
 
-    public List<Book> getBookByCategory(Category category) {
+    public List<Book> getBookByCategory(String category) {
         listByCategory = new ArrayList<Book>();
         for (int i = 0; i < listBook.size(); i++) {
-            if (listBook.get(i).getCategory().equals(category)) {
+            if (listBook.get(i).getCategory().equalsIgnoreCase(category)) {
                 listByCategory.add(listBook.get(i));
             }
         }
@@ -77,7 +65,7 @@ public class BookRepository {
                 count++;
             }
         }
-        System.out.println((count == 0) ? "Khong co sach cua tac gia nay." : "");
+        System.out.println((count == 0) ? "Khong có sách của tác giả này." : "");
     }
     
     public void search(String name) {
@@ -88,72 +76,96 @@ public class BookRepository {
                 count++;
             }
         }
-        System.out.println((count == 0) ? "Khong co sach can tim." : "");
+        System.out.println((count == 0) ? "Không có sách cần tìm." : "");
     }
 
-    public void add(Category category) {
+    public void add() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Nhap ma sach: ");
-        String bookId = sc.nextLine();
-        System.out.print("Nhap ten sach: ");
-        String bookName = sc.nextLine();
-        System.out.print("Nhap tac gia: ");
-        String arthor = sc.nextLine();
-        System.out.print("Nhap nha xuat ban: ");
-        String pulisher = sc.nextLine();
-        System.out.print("Nhap nam xuat ban: ");
-        int publicYear = Integer.valueOf(sc.nextLine());
-        System.out.print("Nhap so lan muon: ");
-        int borrowedTime = Integer.valueOf(sc.nextLine());
-        System.out.print("Nhap so luong dang muon: ");
-        int borrowing = Integer.valueOf(sc.nextLine());
-        System.out.print("Nhap so luong con: ");
-        int inStock = Integer.valueOf(sc.nextLine());
-        sc.close();
+        try {
+            System.out.print("Nhập mã sách: ");
+            String bookId = sc.nextLine();
+            System.out.print("Nhập tên sách: ");
+            String bookName = sc.nextLine();
+            System.out.print("Nhập tác giả: ");
+            String arthor = sc.nextLine();
+            System.out.print("Nhập nhà xuất bản: ");
+            String publisher = sc.nextLine();
+            System.out.print("Nhập năm xuất bản: ");
+            int publicYear = Integer.valueOf(sc.nextLine());
+            System.out.print("Nhập số lần mượn: ");
+            int borrowedTime = Integer.valueOf(sc.nextLine());
+            System.out.print("Nhập số lượng đang mượn: ");
+            int borrowing = Integer.valueOf(sc.nextLine());
+            System.out.print("Nhập số lượng còn lại: ");
+            int inStock = Integer.valueOf(sc.nextLine());
+            System.out.print("Nhập thể loại: ");
+            String category = sc.nextLine();
+            listBook.add(new Book(bookId, bookName, arthor, publisher, publicYear, borrowedTime, borrowing, inStock, category));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        System.out.println("Danh sách sau khi thêm: ");
+        listBook.forEach(System.out::println);
+        writeFile();
     }
 
-    public void edit(String name) {
+    public void edit(String id) {
         int count = 0;
         for (int i = 0; i < listBook.size(); i++) {
-            if (listBook.get(i).getBookName().contains(name)) {
+            if (listBook.get(i).getBookId().contains(id)) {
                 System.out.println(listBook.get(i).toString());
                 Scanner sc = new Scanner(System.in);
-                System.out.print("Nhap ma sach: ");
-                String bookId = sc.nextLine();
-                System.out.print("Nhap ten sach: ");
-                String bookName = sc.nextLine();
-                System.out.print("Nhap tac gia: ");
-                String arthor = sc.nextLine();
-                System.out.print("Nhap nha xuat ban: ");
-                String pulisher = sc.nextLine();
-                System.out.print("Nhap nam xuat ban: ");
-                int publicYear = Integer.valueOf(sc.nextLine());
-                System.out.print("Nhap so lan muon: ");
-                int borrowedTime = Integer.valueOf(sc.nextLine());
-                System.out.print("Nhap so luong dang muon: ");
-                int borrowing = Integer.valueOf(sc.nextLine());
-                System.out.print("Nhap so luong con: ");
-                int inStock = Integer.valueOf(sc.nextLine());
-                sc.close();
-                count++;
-                System.out.println("Sach sau khi sua: ");
-                System.out.println(listBook.get(i).toString());
+                try {
+                    System.out.print("Nhập mã sách: ");
+                    String bookId = sc.nextLine();
+                    listBook.get(i).setBookId(bookId);
+                    System.out.print("Nhập tên sách: ");
+                    String bookName = sc.nextLine();
+                    listBook.get(i).setBookName(bookName);
+                    System.out.print("Nhập tác giả: ");
+                    String arthor = sc.nextLine();
+                    listBook.get(i).setArthor(arthor);
+                    System.out.print("Nhập nhà xuất bản: ");
+                    String publisher = sc.nextLine();
+                    listBook.get(i).setPublisher(publisher);
+                    System.out.print("Nhập năm xuất bản: ");
+                    int publicYear = Integer.valueOf(sc.nextLine());
+                    listBook.get(i).setPublicYear(publicYear);
+                    System.out.print("Nhập số lần mượn: ");
+                    int borrowedTime = Integer.valueOf(sc.nextLine());
+                    listBook.get(i).setBorrowedTime(borrowedTime);
+                    System.out.print("Nhập số lượng đang mượn: ");
+                    int borrowing = Integer.valueOf(sc.nextLine());
+                    listBook.get(i).setBorrowing(borrowing);
+                    System.out.print("Nhập số lượng còn lại: ");
+                    int inStock = Integer.valueOf(sc.nextLine());
+                    listBook.get(i).setInStock(inStock);
+                    System.out.print("Nhập thể loại: ");
+                    String category = sc.nextLine();
+                    listBook.get(i).setCategory(category);
+                    count++;
+                    System.out.println("Danh sách sau khi sửa: ");
+                    System.out.println(listBook.get(i).toString());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } 
             }
         }
         if (count == 0) {
-            System.out.println("Khong tim thay sach.");
+            System.out.println("Không tìm thấy sách.");
         }
         writeFile();
     }
 
     public void delete(String name) {
         for (int i = 0; i < listBook.size(); i++) {
-            if (listBook.get(i).getBookName().contains(name)) {
+            if (listBook.get(i).getBookId().contains(name)) {
                 System.out.println(listBook.get(i).toString());
                 listBook.remove(listBook.get(i));
             }
         }
-        System.out.println("Danh sach sau khi xoa: ");
+        System.out.println("Danh sách sau khi xóa: ");
         listBook.forEach(System.out::println);
         writeFile();
     }
