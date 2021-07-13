@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Two Numbers</title>
+</head>
+<body>
+    <h1>Cộng hai số</h1>
+    <form action="#" th:action="@{/sum}" th:object="${sumRequest}"method="post">
+        Nhập số A: <input type="number" th:field="*{numberA}"/><br><br>
+        Nhập số B: <input type="number" th:field="*{numberB}"/><br><br>
+        <button type="submit">Kết quả</button>&emsp;<strong th:text="${sumResult?.result}"></strong>
+    </form>
+    <!-- <br>
+    <div>
+        Kết quả: <strong th:text="${sumResult?.result}"></strong>
+    </div> -->
+</body>
+</html>

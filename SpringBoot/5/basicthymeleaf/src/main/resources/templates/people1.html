@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách 1</title>
+</head>
+<body>
+    <table>
+        <tr th:each="person, iStat:${people}">
+            <td>
+                <img src="https://png.pngitem.com/pimgs/s/111-1114718_transparent-sleep-icon-png-person-icon-circle-png.png" alt="" style="background-position:center center" width=150px height=150px>
+            </th>
+            <td>
+                <p th:text="${person.name}"></p>
+                <p th:text="${person.nationality}"></p>
+                <p th:text="${person.birthdate}"></p>
+                <p th:text="${person.gender}"></p>
+            </th>
+        </tr>
+    </table>
+</body>
+</html>
